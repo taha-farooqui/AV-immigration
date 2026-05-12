@@ -955,7 +955,7 @@ div.mobile-nav a.cta-button:hover { background: #f06730 !important; color: #ffff
 }
 @media (max-width: 767px) {
   .testimonial-left { padding-top: 0; }
-  .testimonial-content { grid-template-columns: 1fr; gap: 32px; }
+  .testimonial-content { grid-template-columns: 1fr; gap: 32px; margin-top: 30px;}
   .testimonial-image { max-width: 400px; }
   .testimonial-right { padding: 40px 0 56px; gap: 32px;}
   .testimonials-section .swiper-pagination-bullet { width: 8px; height: 8px; margin: 0 4px !important; }

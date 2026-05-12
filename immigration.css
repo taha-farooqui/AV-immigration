@@ -753,7 +753,7 @@ div.mobile-nav a.cta-button:hover { background: #f06730 !important; color: #ffff
   font-size: 24px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
   .implementation-section .container { gap: 60px; }
   .implementation-grid { grid-template-columns: repeat(2, 1fr); }
   .implementation-grid .impact-stat-box:last-child:nth-child(odd) { grid-column: 1 / -1; }
@@ -1165,7 +1165,7 @@ div.mobile-nav a.cta-button:hover { background: #f06730 !important; color: #ffff
 }
 
 .cta-title { max-width: 1200px; font-size: var(--alpha-heading-h0); font-weight: var(--font-weight-medium); color: var(--text-white); margin: 0; line-height: 1.2; }
-.cta-subtitle { max-width: 700px; font-size: var(--alpha-body-large); color: var(--text-white); font-weight: var(--font-weight-medium); margin: 0; }
+.cta-subtitle { max-width: 600px; font-size: var(--alpha-body-large); color: var(--text-white); font-weight: var(--font-weight-medium); margin: 0; }
 
 .cta-action-button {
   position: relative;

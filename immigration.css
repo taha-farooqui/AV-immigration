@@ -1164,8 +1164,8 @@ div.mobile-nav a.cta-button:hover { background: #f06730 !important; color: #ffff
   padding: 80px 40px;
 }
 
-.cta-title { font-size: var(--alpha-heading-h0); font-weight: var(--font-weight-medium); color: var(--text-white); margin: 0; line-height: 1.2; }
-.cta-subtitle { font-size: var(--alpha-body-large); color: var(--text-white); font-weight: var(--font-weight-medium); margin: 0; }
+.cta-title { max-width: 1200px; font-size: var(--alpha-heading-h0); font-weight: var(--font-weight-medium); color: var(--text-white); margin: 0; line-height: 1.2; }
+.cta-subtitle { max-width: 700px; font-size: var(--alpha-body-large); color: var(--text-white); font-weight: var(--font-weight-medium); margin: 0; }
 
 .cta-action-button {
   position: relative;
@@ -1258,6 +1258,7 @@ div.mobile-nav a.cta-button:hover { background: #f06730 !important; color: #ffff
 @media (max-width: 1024px) {
   .platforms-grid { grid-template-columns: repeat(2, 1fr); }
   .platforms-section .container {gap: 60px; margin-top: 60px;}
+  .cta-subtitle {max-width: 600px;}
 }
 @media (max-width: 768px) {
   .platforms-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }

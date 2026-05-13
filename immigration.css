@@ -511,7 +511,7 @@ div.mobile-nav a.cta-button:hover { background: #f06730 !important; color: #ffff
 }
 
 .hero-heading {
-  font-size: var(--alpha-heading-h0);
+  font-size: var(--alpha-heading-h1);
   font-weight: var(--font-weight-medium);
   line-height: 1.1;
   color: var(--text-white);
@@ -524,7 +524,7 @@ div.mobile-nav a.cta-button:hover { background: #f06730 !important; color: #ffff
 }
 
 .hero-description {
-  font-size: var(--alpha-body-large);
+  font-size: var(--alpha-body-medium);
   color: var(--text-gray);
   line-height: 1.6;
   margin-bottom: 40px;

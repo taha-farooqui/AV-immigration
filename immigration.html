@@ -544,76 +544,109 @@
 <section class="contact-section" id="contact">
   <div class="container">
     <div class="contact-header">
-      <h2 class="contact-title">Book your free tech audit</h2>
-      <p class="contact-subtitle">30 minutes. No cost. No pressure. We confirm fit on the call.</p>
+      <h2 class="contact-title">Let's see how we can help.</h2>
+      <p class="contact-subtitle">60 seconds. Six questions.<br>So the call is specific to your workflows.</p>
     </div>
-    <form class="contact-form" id="auditForm" novalidate>
-      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label" for="firstName">First name</label>
-          <input class="form-input" type="text" id="firstName" name="firstName" required>
-          <span class="form-error" data-error-for="firstName">Please enter your first name.</span>
+
+    <div class="contact-tabs" role="tablist">
+      <button type="button" class="contact-tab active" role="tab" aria-selected="true" data-tab="form" id="tabForm">Contact Form</button>
+      <button type="button" class="contact-tab" role="tab" aria-selected="false" data-tab="call" id="tabCall">Schedule a call</button>
+    </div>
+
+    <div class="contact-panel active" id="panelForm" role="tabpanel" aria-labelledby="tabForm">
+      <form class="contact-form" id="auditForm" novalidate>
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="fullName">What is your name?</label>
+            <input class="form-input" type="text" id="fullName" name="fullName" placeholder="Full name" required>
+            <span class="form-error" data-error-for="fullName">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">What is your email address?</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="Email address" required>
+            <span class="form-error" data-error-for="email">Please enter a valid email address.</span>
+          </div>
         </div>
+
         <div class="form-group">
-          <label class="form-label" for="lastName">Last name</label>
-          <input class="form-input" type="text" id="lastName" name="lastName" required>
-          <span class="form-error" data-error-for="lastName">Please enter your last name.</span>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label" for="email">Email</label>
-          <input class="form-input" type="email" id="email" name="email" required>
-          <span class="form-error" data-error-for="email">Please enter a valid email address.</span>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="firmName">Firm name</label>
-          <input class="form-input" type="text" id="firmName" name="firmName" required>
+          <label class="form-label" for="firmName">What is your Firm's name?</label>
+          <input class="form-input" type="text" id="firmName" name="firmName" placeholder="Firm name" required>
           <span class="form-error" data-error-for="firmName">Please enter your firm name.</span>
         </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label" for="firmSize">Firm size</label>
-          <div class="custom-select" id="firmSizeSelect">
-            <button type="button" class="custom-select-trigger" aria-haspopup="listbox" aria-expanded="false">
-              <span class="custom-select-value" data-placeholder="true">Select firm size</span>
-              <svg class="select-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="custom-select-dropdown" role="listbox">
-              <div class="custom-select-options">
-                <div class="custom-select-option" role="option" data-value="solo">Solo (1 attorney)</div>
-                <div class="custom-select-option" role="option" data-value="1-5">Small (1-5 attorneys)</div>
-                <div class="custom-select-option" role="option" data-value="5-25">Mid-size (5-25 attorneys)</div>
-                <div class="custom-select-option" role="option" data-value="25-50">Large (25-50 attorneys)</div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="firmSize">Number of Attorneys</label>
+            <div class="custom-select" id="firmSizeSelect">
+              <button type="button" class="custom-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+                <span class="custom-select-value" data-placeholder="true">Please select</span>
+                <svg class="select-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="custom-select-dropdown" role="listbox">
+                <div class="custom-select-options">
+                  <div class="custom-select-option" role="option" data-value="solo">Solo (1 attorney)</div>
+                  <div class="custom-select-option" role="option" data-value="1-5">Small (1-5 attorneys)</div>
+                  <div class="custom-select-option" role="option" data-value="5-25">Mid-size (5-25 attorneys)</div>
+                  <div class="custom-select-option" role="option" data-value="25-50">Large (25-50 attorneys)</div>
+                </div>
               </div>
+              <input type="hidden" name="firmSize" id="firmSize" required>
             </div>
-            <input type="hidden" name="firmSize" id="firmSize" required>
+            <span class="form-error" data-error-for="firmSize">Please select the number of attorneys.</span>
           </div>
-          <span class="form-error" data-error-for="firmSize">Please select your firm size.</span>
+          <div class="form-group">
+            <label class="form-label" for="practiceArea">Practice Area</label>
+            <div class="custom-select" id="practiceAreaSelect">
+              <button type="button" class="custom-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+                <span class="custom-select-value" data-placeholder="true">Please select</span>
+                <svg class="select-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="custom-select-dropdown" role="listbox">
+                <div class="custom-select-options">
+                  <div class="custom-select-option" role="option" data-value="immigration">Immigration</div>
+                  <div class="custom-select-option" role="option" data-value="personal-injury">Personal Injury</div>
+                  <div class="custom-select-option" role="option" data-value="family">Family Law</div>
+                  <div class="custom-select-option" role="option" data-value="corporate">Corporate</div>
+                  <div class="custom-select-option" role="option" data-value="other">Other</div>
+                </div>
+              </div>
+              <input type="hidden" name="practiceArea" id="practiceArea" required>
+            </div>
+            <span class="form-error" data-error-for="practiceArea">Please select your practice area.</span>
+          </div>
         </div>
+
         <div class="form-group" id="platformGroup">
-          <label class="form-label">Current platform</label>
+          <label class="form-label">Which platform does your firm use?</label>
           <div class="platform-chips">
-            <label class="chip"><input type="radio" name="platform" value="Docketwise" required><span class="chip-label">Docketwise</span></label>
+            <label class="chip"><input type="radio" name="platform" value="Clio" required><span class="chip-label">Clio</span></label>
+            <label class="chip"><input type="radio" name="platform" value="Filevine"><span class="chip-label">Filevine</span></label>
+            <label class="chip"><input type="radio" name="platform" value="Docketwise"><span class="chip-label">Docketwise</span></label>
             <label class="chip"><input type="radio" name="platform" value="MyCase"><span class="chip-label">MyCase</span></label>
-            <label class="chip"><input type="radio" name="platform" value="Clio"><span class="chip-label">Clio</span></label>
-            <label class="chip"><input type="radio" name="platform" value="Camplegal"><span class="chip-label">Camplegal</span></label>
             <label class="chip"><input type="radio" name="platform" value="Other"><span class="chip-label">Other</span></label>
           </div>
-          <span class="form-error" data-error-for="platform">Please choose your current platform.</span>
+          <span class="form-error" data-error-for="platform">Please choose your platform.</span>
         </div>
+
+        <div class="form-group">
+          <label class="form-label" for="painPoint">Biggest pain point?</label>
+          <textarea class="form-textarea" id="painPoint" name="painPoint" rows="5" placeholder="The more context, the better. What's the actual problem? What have you tried? What needs to change?"></textarea>
+        </div>
+
+        <button type="submit" class="contact-submit">
+          Start the conversation
+          <svg width="22" height="22" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.2661 0.732503C27.9519 0.418225 27.5596 0.193373 27.1297 0.0811012C26.6997 -0.0311704 26.2476 -0.0268033 25.8198 0.0937527L25.7923 0.102503L1.80359 7.375C1.31707 7.51611 0.884902 7.8017 0.564319 8.19392C0.243736 8.58614 0.0498683 9.0665 0.00839456 9.57137C-0.0330792 10.0762 0.0797978 10.5818 0.332075 11.0211C0.584352 11.4604 0.964125 11.8126 1.42109 12.0313L11.8736 17.125L16.9623 27.5813C17.163 28.008 17.4814 28.3686 17.8799 28.6206C18.2785 28.8725 18.7408 29.0055 19.2123 29.0038C19.2836 29.0038 19.3561 29.0038 19.4286 28.995C19.9348 28.956 20.4168 28.7625 20.8094 28.4405C21.202 28.1186 21.4862 27.6838 21.6236 27.195L28.8961 3.20625C28.8997 3.19734 28.9027 3.18814 28.9048 3.17875C29.0254 2.75103 29.0298 2.2989 28.9175 1.86893C28.8052 1.43896 28.5804 1.04668 28.2661 0.732503ZM19.1123 25.1338L14.8161 16.3038L20.5661 10.56C20.7056 10.4205 20.8163 10.2548 20.8918 10.0725C20.9673 9.89022 21.0062 9.69483 21.0062 9.4975C21.0062 9.30018 20.9673 9.10479 20.8918 8.92248C20.8163 8.74018 20.7056 8.57453 20.5661 8.435C20.4266 8.29547 20.2609 8.18479 20.0786 8.10928C19.8963 8.03377 19.7009 7.9949 19.5036 7.9949C19.3063 7.9949 19.1109 8.03377 18.9286 8.10928C18.7463 8.18479 18.5806 8.29547 18.4411 8.435L12.6911 14.185L3.86484 9.88625L25.7486 3.25L19.1123 25.1338Z" fill="currentColor"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="contact-panel" id="panelCall" role="tabpanel" aria-labelledby="tabCall" hidden>
+      <div class="calendly-card">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/hammad-alphaventure/30min?hide_gdpr_banner=1&background_color=ffffff&text_color=0a0a0a&primary_color=f06730" style="min-width:320px; height:760px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
       </div>
-      <div class="form-group">
-        <label class="form-label" for="painPoint">What's costing you the most time right now? <span class="form-label-optional">(optional)</span></label>
-        <textarea class="form-textarea" id="painPoint" name="painPoint" rows="5"></textarea>
-      </div>
-      <button type="submit" class="contact-submit">
-        Book my audit
-        <svg width="20" height="20" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.5613 11.5664L15.5613 20.5664C15.2795 20.8481 14.8973 21.0065 14.4988 21.0065C14.1002 21.0065 13.718 20.8481 13.4363 20.5664C13.1545 20.2846 12.9961 19.9024 12.9961 19.5039C12.9961 19.1053 13.1545 18.7231 13.4363 18.4414L19.875 12.0051H1.5C1.10218 12.0051 0.720644 11.8471 0.43934 11.5658C0.158035 11.2845 0 10.9029 0 10.5051C0 10.1073 0.158035 9.72575 0.43934 9.44444C0.720644 9.16314 1.10218 9.0051 1.5 9.0051H19.875L13.4387 2.5651C13.157 2.28331 12.9986 1.90112 12.9986 1.5026C12.9986 1.10409 13.157 0.721894 13.4387 0.440102C13.7205 0.158309 14.1027 4.19903e-09 14.5012 0C14.8998 -4.19904e-09 15.282 0.158309 15.5637 0.440102L24.5637 9.4401C24.7036 9.57964 24.8145 9.74544 24.8901 9.92797C24.9657 10.1105 25.0045 10.3062 25.0043 10.5037C25.0041 10.7013 24.9648 10.8969 24.8888 11.0792C24.8127 11.2616 24.7014 11.4271 24.5613 11.5664Z" fill="currentColor"/></svg>
-      </button>
-    </form>
+    </div>
   </div>
 </section>
 
@@ -840,38 +873,71 @@
     });
   })();
 
-  // Custom select for firm size
+  // Contact tabs
   (function () {
-    var select = document.getElementById('firmSizeSelect');
-    if (!select) return;
-    var trigger = select.querySelector('.custom-select-trigger');
-    var valueEl = select.querySelector('.custom-select-value');
-    var hidden = document.getElementById('firmSize');
-    var options = select.querySelectorAll('.custom-select-option');
-
-    trigger.addEventListener('click', function () {
-      var open = select.classList.toggle('open');
-      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    var tabs = document.querySelectorAll('.contact-tab');
+    var panels = {
+      form: document.getElementById('panelForm'),
+      call: document.getElementById('panelCall')
+    };
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var target = tab.dataset.tab;
+        tabs.forEach(function (t) {
+          var isActive = t === tab;
+          t.classList.toggle('active', isActive);
+          t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+        Object.keys(panels).forEach(function (key) {
+          var isActive = key === target;
+          panels[key].classList.toggle('active', isActive);
+          if (isActive) panels[key].removeAttribute('hidden');
+          else panels[key].setAttribute('hidden', '');
+        });
+      });
     });
+  })();
 
-    options.forEach(function (opt) {
-      opt.addEventListener('click', function () {
-        options.forEach(function (o) { o.classList.remove('selected'); });
-        opt.classList.add('selected');
-        valueEl.textContent = opt.textContent;
-        valueEl.removeAttribute('data-placeholder');
-        hidden.value = opt.dataset.value;
-        select.classList.remove('open');
-        trigger.setAttribute('aria-expanded', 'false');
-        hidden.dispatchEvent(new Event('change', { bubbles: true }));
+  // Custom select (works for both firm size and practice area)
+  (function () {
+    var selects = document.querySelectorAll('.contact-section .custom-select');
+    selects.forEach(function (select) {
+      var trigger = select.querySelector('.custom-select-trigger');
+      var valueEl = select.querySelector('.custom-select-value');
+      var placeholderText = valueEl.textContent;
+      var hidden = select.querySelector('input[type="hidden"]');
+      var options = select.querySelectorAll('.custom-select-option');
+      select.dataset.placeholderText = placeholderText;
+
+      trigger.addEventListener('click', function () {
+        // Close other selects
+        selects.forEach(function (other) { if (other !== select) other.classList.remove('open'); });
+        var open = select.classList.toggle('open');
+        trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      options.forEach(function (opt) {
+        opt.addEventListener('click', function () {
+          options.forEach(function (o) { o.classList.remove('selected'); });
+          opt.classList.add('selected');
+          valueEl.textContent = opt.textContent;
+          valueEl.removeAttribute('data-placeholder');
+          hidden.value = opt.dataset.value;
+          select.classList.remove('open');
+          trigger.setAttribute('aria-expanded', 'false');
+          hidden.dispatchEvent(new Event('change', { bubbles: true }));
+        });
       });
     });
 
     document.addEventListener('click', function (e) {
-      if (!select.contains(e.target)) {
-        select.classList.remove('open');
-        trigger.setAttribute('aria-expanded', 'false');
-      }
+      selects.forEach(function (select) {
+        if (!select.contains(e.target)) {
+          select.classList.remove('open');
+          var trigger = select.querySelector('.custom-select-trigger');
+          if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   })();
 
@@ -913,7 +979,7 @@
       return true;
     }
 
-    var required = ['firstName', 'lastName', 'email', 'firmName', 'firmSize', 'platform'];
+    var required = ['fullName', 'email', 'firmName', 'firmSize', 'practiceArea', 'platform'];
 
     // Clear errors on user input
     required.forEach(function (name) {
@@ -950,11 +1016,13 @@
       }
 
       statusEl.className = 'form-status success';
-      statusEl.textContent = 'Thanks — we\'ll be in touch shortly to confirm your audit.';
+      statusEl.textContent = 'Thanks - we\'ll be in touch shortly to start the conversation.';
       form.reset();
-      // Reset the custom select display
-      var valueEl = form.querySelector('.custom-select-value');
-      if (valueEl) { valueEl.textContent = 'Select firm size'; valueEl.setAttribute('data-placeholder', 'true'); }
+      // Reset both custom selects
+      form.querySelectorAll('.custom-select').forEach(function (sel) {
+        var valueEl = sel.querySelector('.custom-select-value');
+        if (valueEl) { valueEl.textContent = sel.dataset.placeholderText || 'Please select'; valueEl.setAttribute('data-placeholder', 'true'); }
+      });
       form.querySelectorAll('.custom-select-option.selected').forEach(function (o) { o.classList.remove('selected'); });
     });
   })();

@@ -863,6 +863,69 @@ div.mobile-nav a.cta-button:hover { background: #f06730 !important; color: #ffff
   .section-heading { width: 100%; }
 }
 
+/* ========== CLERQ SECTION ========== */
+.clerq-section {
+  background: #f2f2f2;
+}
+
+.clerq-section .container {
+  max-width: var(--max-width-wide);
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.clerq-top {
+  display: flex;
+  flex-direction: column;
+  gap: 128px;
+}
+
+.clerq-title {
+  font-size: var(--alpha-heading-h1);
+  font-weight: var(--font-weight-medium);
+  color: var(--bg-color);
+  margin: 0;
+  max-width: 900px;
+  line-height: 130%;
+}
+
+.clerq-intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+.clerq-intro-logo img { width: 100%; max-width: 323px; height: auto; }
+.clerq-intro-text {
+  font-size: var(--alpha-body-medium);
+  color: var(--text-description);
+  line-height: 130%;
+  margin: 0;
+}
+
+.clerq-stats-grid { grid-template-columns: repeat(3, 1fr); max-width: none; width: 100%; }
+
+@media (max-width: 1024px) {
+  .clerq-section .container { gap: 60px; }
+  .clerq-top { gap: 64px; }
+  .clerq-intro { grid-template-columns: 1fr; gap: 32px; }
+  .clerq-intro-logo img { max-width: 220px; }
+}
+@media (max-width: 768px) {
+  .clerq-intro{
+    gap: 24px;
+  }
+  .clerq-section .container { gap: 24px; }
+  .clerq-top { gap: 48px; }
+  .clerq-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .clerq-stats-grid .impact-stat-box:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .clerq-stats-grid { grid-template-columns: 1fr; }
+  .clerq-stats-grid .impact-stat-box:last-child:nth-child(odd) { grid-column: auto; }
+}
+
 /* ========== TESTIMONIALS SECTION ========== */
 .testimonials-section {
   background: #f2f2f2;
@@ -1694,8 +1757,9 @@ div.mobile-nav a.cta-button:hover { background: #f06730 !important; color: #ffff
 /* .logos-impact-section      { padding: 120px 80px; } */
 .implementation-section    { padding: 0 80px 120px; }
 .what-we-do-section        { padding: 120px 80px; }
-.testimonials-section      { padding: 120px 80px; }
-.how-it-works-section      { padding: 120px 80px; }
+.clerq-section             { padding: 120px 80px 0; }
+.testimonials-section      { padding: 120px 80px 0; }
+.how-it-works-section      { padding: 120px 80px 0; }
 .results-section           { padding: 120px 80px; }
 .cta-section               { padding: 0 32px; }
 .platforms-section         { padding: 120px 80px; }
@@ -1713,8 +1777,9 @@ div.mobile-nav a.cta-button:hover { background: #f06730 !important; color: #ffff
   /* .logos-impact-section      { padding: 200px 120px; } */
   .implementation-section    { padding: 0 120px 200px; }
   .what-we-do-section        { padding: 200px 120px; }
-  .testimonials-section      { padding: 200px 120px; }
-  .how-it-works-section      { padding: 200px 120px; }
+  .clerq-section             { padding: 200px 120px 0; }
+  .testimonials-section      { padding: 200px 120px 0; }
+  .how-it-works-section      { padding: 200px 120px 0; }
   .results-section           { padding: 200px 120px; }
   .cta-section               { padding: 0 32px; }
   .platforms-section         { padding: 200px 120px; }
@@ -1732,8 +1797,9 @@ div.mobile-nav a.cta-button:hover { background: #f06730 !important; color: #ffff
   /* .logos-impact-section      { padding: 200px 120px; } */
   .implementation-section    { padding: 0 120px 200px; }
   .what-we-do-section        { padding: 200px 120px; }
-  .testimonials-section      { padding: 200px 120px; }
-  .how-it-works-section      { padding: 200px 120px; }
+  .clerq-section             { padding: 200px 120px 0; }
+  .testimonials-section      { padding: 200px 120px 0; }
+  .how-it-works-section      { padding: 200px 120px 0; }
   .results-section           { padding: 200px 120px; }
   .cta-section               { padding: 0 30px; }
   .platforms-section         { padding: 200px 120px; }
@@ -1751,8 +1817,9 @@ div.mobile-nav a.cta-button:hover { background: #f06730 !important; color: #ffff
   /* .logos-impact-section      { padding: 100px 48px; } */
   .implementation-section    { padding: 100px 48px; }
   .what-we-do-section        { padding: 100px 48px; }
-  .testimonials-section      { padding: 100px 48px; }
-  .how-it-works-section      { padding: 100px 48px; }
+  .clerq-section             { padding: 100px 48px 0; }
+  .testimonials-section      { padding: 100px 48px 0; }
+  .how-it-works-section      { padding: 100px 48px 0; }
   .results-section           { padding: 100px 48px; }
   .cta-section               { padding: 100px 20px !important; }
   .platforms-section         { padding: 100px 48px; }
@@ -1770,8 +1837,9 @@ div.mobile-nav a.cta-button:hover { background: #f06730 !important; color: #ffff
   /* .logos-impact-section      { padding: 80px 28px; } */
   .implementation-section    { padding: 80px 28px; }
   .what-we-do-section        { padding: 80px 28px; }
-  .testimonials-section      { padding: 80px 28px; }
-  .how-it-works-section      { padding: 80px 28px; }
+  .clerq-section             { padding: 80px 28px 0; }
+  .testimonials-section      { padding: 80px 28px 0; }
+  .how-it-works-section      { padding: 80px 28px 0; }
   .results-section           { padding: 80px 28px; }
   .cta-section               { padding: 80px 20px !important; }
   .platforms-section         { padding: 80px 28px; }
@@ -1789,8 +1857,9 @@ div.mobile-nav a.cta-button:hover { background: #f06730 !important; color: #ffff
   /* .logos-impact-section      { padding: 60px 20px; } */
   .implementation-section    { padding: 60px 20px; }
   .what-we-do-section        { padding: 60px 20px; }
-  .testimonials-section      { padding: 60px 20px; }
-  .how-it-works-section      { padding: 60px 20px; }
+  .clerq-section             { padding: 60px 20px 0; }
+  .testimonials-section      { padding: 60px 20px 0; }
+  .how-it-works-section      { padding: 60px 20px 0; }
   .results-section           { padding: 60px 20px; }
   .cta-section               { padding: 60px 20px !important; }
   .platforms-section         { padding: 60px 20px; }
